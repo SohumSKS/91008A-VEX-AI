@@ -8,13 +8,14 @@ using code = vision::code;
 brain  Brain;
 
 // VEXcode device constructors
-motor LeftDriveSmart = motor(PORT2, ratio18_1, false);
-motor RightDriveSmart = motor(PORT1, ratio18_1, true);
-drivetrain Drivetrain = drivetrain(LeftDriveSmart, RightDriveSmart, 319.19, 381, 279.4, mm, 1);
 motor leftIntake = motor(PORT6, ratio18_1, false);
 motor rightIntake = motor(PORT7, ratio18_1, true);
-motor botOuttake = motor(PORT5, ratio18_1, false);
-motor topOuttake = motor(PORT4, ratio18_1, false);
+motor bottomRoller = motor(PORT5, ratio18_1, false);
+motor topRoller = motor(PORT4, ratio18_1, false);
+motor drive_left = motor(PORT2, ratio18_1, false);
+motor drive_right = motor(PORT1, ratio18_1, true);
+encoder leftEncoder = encoder(Brain.ThreeWirePort.C);
+encoder rightEncoder = encoder(Brain.ThreeWirePort.E);
 
 // VEXcode generated functions
 
